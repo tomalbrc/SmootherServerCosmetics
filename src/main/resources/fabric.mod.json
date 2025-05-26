@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "smootherservercosmetics",
+  "version": "${version}",
+  "name": "SmootherServerCosmetics",
+  "description": "Smoother server cosmetics for filament and friends",
+  "authors": [],
+  "contact": {},
+  "license": "AGPL-3.0",
+  "icon": "assets/smootherservercosmetics/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "main": [
+      "de.tomalbrc.smootherservercosmetics.Smootherservercosmetics"
+    ]
+  },
+  "mixins": [
+    "smootherservercosmetics.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
