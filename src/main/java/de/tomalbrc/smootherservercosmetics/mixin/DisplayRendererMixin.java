@@ -18,7 +18,7 @@ public abstract class DisplayRendererMixin<T extends Display, S extends DisplayE
     }
 
     @Inject(method = "extractRenderState(Lnet/minecraft/world/entity/Display;Lnet/minecraft/client/renderer/entity/state/DisplayEntityRenderState;F)V", at = @At("RETURN"))
-    private void applyPlayerVehicleRot(T display, S displayEntityRenderState, float f, CallbackInfo ci) {
+    private void ssc$applyPlayerVehicleRot(T display, S displayEntityRenderState, float f, CallbackInfo ci) {
         if (display.isPassenger() && display instanceof Display.ItemDisplay && display.getVehicle() instanceof Player player) {
             displayEntityRenderState.entityYRot = player.getPreciseBodyRotation(f);
         }

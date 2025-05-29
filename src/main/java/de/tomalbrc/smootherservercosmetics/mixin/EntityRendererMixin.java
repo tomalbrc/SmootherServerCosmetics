@@ -15,7 +15,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 @Mixin(EntityRenderer.class)
 public abstract class EntityRendererMixin<T extends Entity, S extends EntityRenderState> {
     @Inject(method = "shouldRender", at = @At("HEAD"), cancellable = true)
-    public void shouldRender(T entity, Frustum frustum, double d, double e, double f, CallbackInfoReturnable<Boolean> cir) {
+    public void ssc$shouldRender(T entity, Frustum frustum, double d, double e, double f, CallbackInfoReturnable<Boolean> cir) {
         if (entity.isPassenger() && entity instanceof Display.ItemDisplay && entity.getVehicle() instanceof Player player) {
             if (player == Minecraft.getInstance().player && Minecraft.getInstance().options.getCameraType().isFirstPerson()) {
                 cir.setReturnValue(false);
